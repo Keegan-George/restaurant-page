@@ -1,1 +1,1 @@
-console.log("Testing");
+import {home} from "./scripts.js";
