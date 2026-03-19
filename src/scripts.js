@@ -28,27 +28,144 @@ function home() {
     content.appendChild(blurb);
 }
 
+
+function menu() {
+    content.textContent = "";
+
+    const donuts = document.createElement("section");
+    donuts.classList.add("donuts");
+    content.appendChild(donuts);
+
+    const donutTitle = document.createElement("h2");
+    donutTitle.classList.add("donut-title");
+    donutTitle.textContent = "Donuts";
+    donuts.appendChild(donutTitle);
+
+    const single = document.createElement("span");
+    single.classList.add("single");
+    single.textContent = "1 - $4.50";
+    donuts.appendChild(single);
+
+    const halfDozen = document.createElement("span");
+    halfDozen.classList.add("half-dozen");
+    halfDozen.textContent = "6 - $22.00";
+    donuts.appendChild(halfDozen);
+
+    const dozen = document.createElement("span");
+    dozen.classList.add("dozen");
+    dozen.textContent = "12 - $43.00";
+    donuts.appendChild(dozen);
+
+    const milkshakes = document.createElement("section");
+    milkshakes.classList.add("milkshakes");
+    content.appendChild(milkshakes);
+
+    const milkshakeTitle = document.createElement("h2");
+    milkshakeTitle.classList.add("milkshake-title");
+    milkshakeTitle.textContent = "Milkshakes";
+    milkshakes.appendChild(milkshakeTitle);
+
+    const smallMilkshake = document.createElement("span");
+    smallMilkshake.classList.add("small-milkshake");
+    smallMilkshake.textContent = "small - $3.45";
+    milkshakes.appendChild(smallMilkshake);
+
+    const mediumMilkshake = document.createElement("span");
+    mediumMilkshake.classList.add("medium-milkshake");
+    mediumMilkshake.textContent = "medium - $5.50";
+    milkshakes.appendChild(mediumMilkshake);
+
+    const largeMilkshake = document.createElement("span");
+    largeMilkshake.classList.add("large-milkshake");
+    largeMilkshake.textContent = "large - $7.25";
+    milkshakes.appendChild(largeMilkshake);
+
+    const milkshakeFlavours = document.createElement("span");
+    milkshakeFlavours.classList.add("milk-shake-flavours");
+    milkshakeFlavours.textContent = "Vanilla, Strawberry, Chocolate, Banana, Oreo, Kit-Kat, Smarties, Biscoff, Pistachio, Cosmic Brownie."
+    milkshakes.appendChild(milkshakeFlavours);
+
+    const drinks = document.createElement("section");
+    drinks.classList.add("drinks");
+    content.appendChild(drinks);
+
+    const drinksTitle = document.createElement("h2");
+    drinksTitle.classList.add("drinks-title");
+    drinksTitle.textContent = "Drinks";
+    drinks.appendChild(drinksTitle);
+
+    const tea = document.createElement("span");
+    tea.classList.add("tea");
+    tea.textContent = "tea - $1.45";
+    drinks.appendChild(tea);
+
+    const coffee = document.createElement("span");
+    coffee.classList.add("coffee");
+    coffee.textContent = "coffee - $2.25";
+    drinks.appendChild(coffee);
+
+    const juice = document.createElement("span");
+    juice.classList.add("juice");
+    juice.textContent = "juice - $3.00";
+    drinks.appendChild(juice);
+
+    const espresso = document.createElement("span");
+    espresso.classList.add("espresso");
+    espresso.textContent = "espresso - $3.45";
+    drinks.appendChild(espresso);
+
+    const latte = document.createElement("span");
+    latte.classList.add("latte");
+    latte.textContent = "latte - $4.25";
+    drinks.appendChild(latte);
+}
+
 function about() {
     content.textContent = "";
 
     const history = document.createElement("section");
     history.classList.add("history");
-    history.textContent = `Established in 1923, in [city], [country], [company name] has grown from
-     a quaint mom and pop shop to multiple locations across North America. With more than 50 unique flavours, 
-     and new creations being added regularly, these hand made doughnuts offer something for everyone. Come visit us! `
     content.appendChild(history);
 
-    const storeHours = document.createElement("section");
-    storeHours.classList.add("store-hours");
-    storeHours.textContent = "Open Hours: Tuesday to Saturday: 10:00am - 6:00pm";
-    content.appendChild(storeHours);
+    const historyTitle = document.createElement("h2");
+    historyTitle.classList.add("history-title");
+    historyTitle.textContent = "History";
+    history.appendChild(historyTitle);
+
+    const historyContent = document.createElement("p");
+    historyContent.classList.add("history-content");
+    historyContent.textContent = `Established in 1923, in [city], [country], [company name] has grown from
+     a quaint mom and pop shop to multiple locations across North America. With more than 50 unique flavours, 
+     and new creations being added regularly, these hand made doughnuts offer something for everyone. Come visit us!`
+    history.appendChild(historyContent);
+
+    const openingHours = document.createElement("section");
+    openingHours.classList.add("store-hours");
+    content.appendChild(openingHours);
+
+    const openingHoursTitle = document.createElement("h2");
+    openingHoursTitle.classList.add("opening-hours-title");
+    openingHoursTitle.textContent = "Opening Hours";
+    openingHours.appendChild(openingHoursTitle);
+
+    const times = document.createElement("span");
+    times.classList.add("times")
+    times.textContent = "Open Hours: Tuesday to Saturday: 10:00am - 6:00pm";
+    openingHours.appendChild(times);
 
     const address = document.createElement("section");
     address.classList.add("address");
-    address.textContent = "1234 blah blah street, City, State H13124";
     content.appendChild(address);
+
+    const addressTitle = document.createElement("h2");
+    addressTitle.classList.add("address-title");
+    addressTitle.textContent = "Address";
+    address.appendChild(addressTitle);
+
+    const addressContent = document.createElement("span");
+    addressContent.classList.add("address-content");
+    addressContent.textContent = "1234 blah blah street, City, State H13124";
+    address.appendChild(addressContent);
 }
 
-
-
-export { home, about };
+export { home, menu, about };

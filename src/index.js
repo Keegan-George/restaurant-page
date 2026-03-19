@@ -1,10 +1,6 @@
-import { home, about } from "./scripts.js";
+import { home, about, menu } from "./scripts.js";
 
 home();
-
-const homeButton = document.querySelector(".home");
-const menuButton = document.querySelector(".menu");
-const aboutButton = document.querySelector(".about");
 
 const navBar = document.querySelector("nav");
 navBar.addEventListener("click", (event) => {
@@ -14,9 +10,11 @@ navBar.addEventListener("click", (event) => {
 
     const buttonClasses = navButton.classList;
 
-
     if (buttonClasses.contains("home")) {
-        home()
+        home();
+    }
+    else if (buttonClasses.contains("menu")) {
+        menu();
     }
     else if (buttonClasses.contains("about")) {
         about();
