@@ -3,7 +3,7 @@ import donutImg from "./donut.jpg";
 const content = document.querySelector("#content");
 
 function home() {
-    content.textContent = "";
+    clearContent();
 
     const hero = document.createElement("figure");
 
@@ -30,7 +30,7 @@ function home() {
 
 
 function menu() {
-    content.textContent = "";
+    clearContent();
 
     const donuts = document.createElement("section");
     donuts.classList.add("donuts");
@@ -121,7 +121,7 @@ function menu() {
 }
 
 function about() {
-    content.textContent = "";
+    clearContent();
 
     const history = document.createElement("section");
     history.classList.add("history");
@@ -166,6 +166,10 @@ function about() {
     addressContent.classList.add("address-content");
     addressContent.textContent = "1234 blah blah street, City, State H13124";
     address.appendChild(addressContent);
+}
+
+function clearContent() {
+    content.textContent = "";
 }
 
 export { home, menu, about };
