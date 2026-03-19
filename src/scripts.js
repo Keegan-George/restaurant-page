@@ -3,8 +3,6 @@ import donutImg from "./donut.jpg";
 const content = document.querySelector("#content");
 
 function home() {
-    clearContent();
-
     const hero = document.createElement("figure");
 
     const heroImage = document.createElement("img");
@@ -31,8 +29,6 @@ function home() {
 
 
 function menu() {
-    clearContent();
-
     const donuts = document.createElement("section");
     donuts.classList.add("donuts");
     content.appendChild(donuts);
@@ -122,8 +118,6 @@ function menu() {
 }
 
 function about() {
-    clearContent();
-
     const history = document.createElement("section");
     history.classList.add("history");
     content.appendChild(history);
@@ -184,4 +178,4 @@ function clearContent() {
     content.textContent = "";
 }
 
-export { home, menu, about };
+export { home, menu, about, clearContent };

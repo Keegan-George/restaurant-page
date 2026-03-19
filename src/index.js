@@ -1,4 +1,4 @@
-import { home, about, menu } from "./scripts.js";
+import { home, about, menu, clearContent } from "./scripts.js";
 
 home();
 
@@ -10,6 +10,7 @@ navBar.addEventListener("click", (event) => {
 
     const buttonClasses = navButton.classList;
 
+    clearContent();
     if (buttonClasses.contains("home")) {
         home();
     }
