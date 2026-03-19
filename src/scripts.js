@@ -16,13 +16,14 @@ function home() {
 
     const headline = document.createElement("section");
     headline.classList.add("headline");
-    headline.textContent = "The best donuts in town!";
+    headline.textContent = "Donuts Done Right";
     hero.appendChild(headline);
 
     const blurb = document.createElement("section");
     blurb.classList.add("blurb");
-    blurb.textContent = `Artisanal donuts handcrafted by highly trained pastry chefs. Savour never before tasted flavors unlike 
-    anything you have ever experienced before.`;
+    blurb.textContent = `Hand-crafted doughnuts made with obsession-level attention to detail. From inventive glazes to bold, 
+    unexpected flavour combinations, every bite is designed to surprise, delight, and leave you craving the next one. 
+    Indulgence starts here.`;
 
     content.appendChild(hero);
     content.appendChild(blurb);
@@ -132,12 +133,23 @@ function about() {
     historyTitle.textContent = "History";
     history.appendChild(historyTitle);
 
-    const historyContent = document.createElement("p");
+    const historyContent = document.createElement("div");
     historyContent.classList.add("history-content");
-    historyContent.textContent = `Established in 1923, in [city], [country], [company name] has grown from
-     a quaint mom and pop shop to multiple locations across North America. With more than 50 unique flavours, 
-     and new creations being added regularly, these hand made doughnuts offer something for everyone. Come visit us!`
     history.appendChild(historyContent);
+
+    const historyContentP1 = document.createElement("p");
+    historyContentP1.classList.add("history-content-p1");
+    historyContentP1.textContent = `Founded in the early 1980s in the bustling streets of Crumbleton, Glaze of Glory began as the one-person 
+    dream of a baker who believed life is simply bettor with doughnuts. Armed with a rolling pin, a tiny storefront, and a knack for 
+    bold flavours, they quickly turned a small neighbourhood shop into the talk of the town.`
+    historyContent.appendChild(historyContentP1);
+
+    const historyContentP2 = document.createElement("p");
+    historyContentP2.classList.add("history-content-p2");
+    historyContentP2.textContent = `Fast-forward to today and our dough has traveled far — with multiple locations across North America, more than 50 flavours, and new 
+    ideas always rising in the kitchen. Whether you're into classics, wild creations, or something in between, we've got a treat that'll 
+    make your day a hole lot sweeter.`
+    historyContent.appendChild(historyContentP2);
 
     const openingHours = document.createElement("section");
     openingHours.classList.add("store-hours");
@@ -164,7 +176,7 @@ function about() {
 
     const addressContent = document.createElement("span");
     addressContent.classList.add("address-content");
-    addressContent.textContent = "1234 blah blah street, City, State H13124";
+    addressContent.textContent = "809 Doughridge Road, Crumbleton";
     address.appendChild(addressContent);
 }
 
