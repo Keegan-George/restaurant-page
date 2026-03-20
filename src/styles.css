@@ -6,8 +6,9 @@
 
 :root {
     --background-color: #A7C1D9;
-    --nav-bar-background-color: #96B3D9;
-    --nav-button-hover-color: #D9AB82;
+    --nav-bar-color: #96B3D9;
+    --nav-button-color: #3A2E2A;
+    --nav-button-hover-color: #B85C74;
 }
 
 body {
@@ -19,7 +20,7 @@ body nav {
     justify-content: center;
     padding: 1.5rem;
     gap: 6rem;
-    background-color: var(--nav-bar-background-color);
+    background-color: var(--nav-bar-color);
     margin-bottom: 2rem;
 }
 
@@ -28,7 +29,9 @@ nav .btn {
     font-size: 1rem;
     font-weight: 700;
     border: none;
-    background-color: var(--nav-bar-background-color);
+    color: var(--nav-button-color);
+    background-color: var(--nav-bar-color);
+
 }
 
 nav .btn:hover {
