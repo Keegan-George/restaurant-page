@@ -130,9 +130,13 @@ function menu() {
 }
 
 function about() {
+    const aboutContainer = document.createElement("div");
+    aboutContainer.classList.add("about-container");
+    content.appendChild(aboutContainer);
+
     const history = document.createElement("section");
     history.classList.add("history");
-    content.appendChild(history);
+    aboutContainer.appendChild(history);
 
     const historyTitle = document.createElement("h2");
     historyTitle.classList.add("history-title");
@@ -145,7 +149,7 @@ function about() {
 
     const historyContentP1 = document.createElement("p");
     historyContentP1.classList.add("history-content-p1");
-    historyContentP1.textContent = `Founded in the early 1980s in the bustling streets of Crumbleton, Glaze of Glory began as the one-person 
+    historyContentP1.textContent = `Founded in the bustling streets of Crumbleton, Glaze of Glory began as the one-person 
     dream of a baker who believed life is simply bettor with doughnuts. Armed with a rolling pin, a tiny storefront, and a knack for 
     bold flavours, they quickly turned a small neighbourhood shop into the talk of the town.`
     historyContent.appendChild(historyContentP1);
@@ -159,21 +163,21 @@ function about() {
 
     const openingHours = document.createElement("section");
     openingHours.classList.add("store-hours");
-    content.appendChild(openingHours);
+    aboutContainer.appendChild(openingHours);
 
     const openingHoursTitle = document.createElement("h2");
     openingHoursTitle.classList.add("opening-hours-title");
     openingHoursTitle.textContent = "Opening Hours";
     openingHours.appendChild(openingHoursTitle);
 
-    const times = document.createElement("span");
-    times.classList.add("times")
-    times.textContent = "Open Hours: Tuesday to Saturday: 10:00am - 6:00pm";
-    openingHours.appendChild(times);
+    const schedule = document.createElement("span");
+    schedule.classList.add("times")
+    schedule.textContent = "Tuesday to Saturday: 10:00am - 6:00pm";
+    openingHours.appendChild(schedule);
 
     const address = document.createElement("section");
     address.classList.add("address");
-    content.appendChild(address);
+    aboutContainer.appendChild(address);
 
     const addressTitle = document.createElement("h2");
     addressTitle.classList.add("address-title");
