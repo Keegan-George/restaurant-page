@@ -37,9 +37,13 @@ function home() {
 }
 
 function menu() {
+    const menuContainer = document.createElement("div");
+    menuContainer.classList.add("menu-container");
+    content.appendChild(menuContainer);
+
     const donuts = document.createElement("section");
     donuts.classList.add("donuts");
-    content.appendChild(donuts);
+    menuContainer.appendChild(donuts);
 
     const donutTitle = document.createElement("h2");
     donutTitle.classList.add("donut-title");
@@ -63,7 +67,7 @@ function menu() {
 
     const milkshakes = document.createElement("section");
     milkshakes.classList.add("milkshakes");
-    content.appendChild(milkshakes);
+    menuContainer.appendChild(milkshakes);
 
     const milkshakeTitle = document.createElement("h2");
     milkshakeTitle.classList.add("milkshake-title");
@@ -92,7 +96,7 @@ function menu() {
 
     const drinks = document.createElement("section");
     drinks.classList.add("drinks");
-    content.appendChild(drinks);
+    menuContainer.appendChild(drinks);
 
     const drinksTitle = document.createElement("h2");
     drinksTitle.classList.add("drinks-title");
