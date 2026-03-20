@@ -1,3 +1,27 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orelega One';
+    src: url('OrelegaOne-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('Quicksand-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +37,7 @@
 
 body {
     background-color: var(--background-color);
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 body nav {
@@ -31,7 +56,7 @@ nav .btn {
     border: none;
     color: var(--nav-button-color);
     background-color: var(--nav-bar-color);
-
+    font-family: 'Quicksand', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 nav .btn:hover {
@@ -45,13 +70,21 @@ nav .btn:hover {
     justify-content: center;
     align-items: center;
     margin: 0rem 5rem;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .hero .hero-text {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.hero-text .hero-title {
+    font-family: 'Orelega One', Georgia, 'Times New Roman', Times, serif;   
+    font-size: 5em;
+}
+
+.hero-text .hero-description {
     max-inline-size: 50ch;
 }
 
