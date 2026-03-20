@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #A7C1D9;
+    --nav-bar-background-color: #96B3D9;
+    --nav-button-hover-color: #D9AB82;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+body nav {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    gap: 6rem;
+    background-color: var(--nav-bar-background-color);
+}
+
+nav .btn {
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    background-color: var(--nav-bar-background-color);
+}
+
+nav .btn:hover {
+    text-decoration: underline;
+    color: var(--nav-button-hover-color);
+    cursor: pointer;
+}

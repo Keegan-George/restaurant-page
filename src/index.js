@@ -1,3 +1,4 @@
+import "./styles.css";
 import { home, about, menu, clearContent } from "./scripts.js";
 
 home();

@@ -1,4 +1,4 @@
-import donutImg from "./donut.jpg";
+import donutsImg from "./donuts-hero.jpg";
 
 const content = document.querySelector("#content");
 
@@ -6,7 +6,7 @@ function home() {
     const hero = document.createElement("figure");
 
     const heroImage = document.createElement("img");
-    heroImage.src = donutImg;
+    heroImage.src = donutsImg;
     heroImage.alrt = "donut with dripping pink frosting";
     heroImage.width = "300"
     heroImage.height = "300";
