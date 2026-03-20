@@ -30,12 +30,20 @@
 
 :root {
     --background-color: #A7C1D9;
+
     --nav-bar-color: #96B3D9;
     --nav-button-color: #3A2E2A;
     --nav-button-hover-color: #A6536A;
+
+    --hero-title-color: #3A2E2A;
+
+    --order-now-color: #C58A46;
+    --order-now-text-color: #3A2E2A;
+    --order-now-border-color: #3A2E2A;
 }
 
 body {
+    color: #4B3F3A;
     background-color: var(--background-color);
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
@@ -80,22 +88,35 @@ nav .btn:hover {
 }
 
 .hero-text .hero-title {
-    font-family: 'Orelega One', Georgia, 'Times New Roman', Times, serif;   
-    font-size: 5em;
+    font-family: 'Orelega One', Georgia, 'Times New Roman', Times, serif;
+    font-size: 8em;
+    color: var(--hero-title-color);
 }
 
 .hero-text .hero-description {
-    max-inline-size: 50ch;
+    max-inline-size: 65ch;
 }
 
 .hero-text .order-now {
     font-weight: 700;
     padding: 0.75rem;
-    width: 8rem;
+    width: 10rem;
     border-radius: 20px;
     margin-top: 2rem;
+    background-color: var(--order-now-color);
+    border: 1px solid var(--order-now-border-color);
     cursor: pointer;
 }
+
+.hero-text .order-now:hover {
+    background-color: #B07A3F;
+}
+
+.hero-text .order-now:active {
+    background-color: #9A6A36;
+}
+
+
 
 .hero .hero-img {
     width: 350px;
