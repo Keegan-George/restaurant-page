@@ -1,5 +1,7 @@
-# restaurant-page
+# Restaurant Page
 
+## Fonts and Images
+- Donut hero image: Nerfee Mirandilla on Unplash
 
 Donut image:
 https://unsplash.com/photos/chocolate-donuts-hzqE4zC6j-E

@@ -3,30 +3,38 @@ import donutsImg from "./donuts-hero.jpg";
 const content = document.querySelector("#content");
 
 function home() {
-    const hero = document.createElement("figure");
+    const hero = document.createElement("section");
+    hero.classList.add("hero");
+    content.appendChild(hero);
 
-    const heroImage = document.createElement("img");
-    heroImage.src = donutsImg;
-    heroImage.alrt = "donut with dripping pink frosting";
-    heroImage.width = "300"
-    heroImage.height = "300";
-    hero.appendChild(heroImage);
+    const heroText = document.createElement("div");
+    heroText.classList.add("hero-text");
+    hero.appendChild(heroText);
 
-    const headline = document.createElement("section");
-    headline.classList.add("headline");
-    headline.textContent = "Donuts Done Right";
-    hero.appendChild(headline);
+    const title = document.createElement("h1");
+    title.classList.add("hero-title");
+    title.textContent = "Glaze of Glory";
+    heroText.appendChild(title);
 
-    const blurb = document.createElement("section");
-    blurb.classList.add("blurb");
-    blurb.textContent = `Hand-crafted doughnuts made with obsession-level attention to detail. From inventive glazes to bold, 
+    const description = document.createElement("p");
+    description.classList.add("hero-description");
+    description.textContent = `Hand-crafted doughnuts made with obsession-level attention to detail. From inventive glazes to bold, 
     unexpected flavour combinations, every bite is designed to surprise, delight, and leave you craving the next one. 
     Indulgence starts here.`;
+    heroText.appendChild(description);
 
-    content.appendChild(hero);
-    content.appendChild(blurb);
+    const orderNowButton = document.createElement("button");
+    orderNowButton.classList.add("btn", "order-now");
+    orderNowButton.textContent = "Order Now";
+    heroText.appendChild(orderNowButton);
+
+
+    const heroImage = document.createElement("img");
+    heroImage.classList.add("hero-img")
+    heroImage.src = donutsImg;
+    heroImage.alt = "Three donuts on light blue background";
+    hero.appendChild(heroImage);
 }
-
 
 function menu() {
     const donuts = document.createElement("section");

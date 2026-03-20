@@ -35,3 +35,30 @@ nav .btn:hover {
     color: var(--nav-button-hover-color);
     cursor: pointer;
 }
+
+#content .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 5rem;
+    gap: 1rem;
+}
+
+.hero .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-inline-size: 50ch;
+}
+
+.hero-text .order-now {
+    font-weight: 700;
+    padding: 0.75rem;
+    width: 8rem;
+    border-radius: 20px;
+    margin-top: 2rem;
+}
+
+.hero .hero-img {
+    width: 350px;
+}
