@@ -14,39 +14,32 @@ const siteContent = {
 }
 
 function home() {
-    const hero = document.createElement("section");
-    hero.classList.add("hero");
+    const hero = createElement("section", ["hero"]);;
     content.appendChild(hero);
 
-    const heroText = document.createElement("div");
-    heroText.classList.add("hero-text");
+    const heroText = createElement("div", ["hero-text"]);
     hero.appendChild(heroText);
 
-    const title = document.createElement("h1");
-    title.classList.add("hero-title");
+    const title = createElement("h1", ["hero-title"]);
     title.textContent = "Glaze of Glory";
     heroText.appendChild(title);
 
-    const description = document.createElement("p");
-    description.classList.add("hero-description");
+    const description = createElement("p", "hero-description");
     description.textContent = siteContent.homeDescription;
     heroText.appendChild(description);
 
-    const orderNowButton = document.createElement("button");
-    orderNowButton.classList.add("btn", "order-now");
+    const orderNowButton = createElement("button", ["btn", "order-now"]);
     orderNowButton.textContent = "Order Now";
     heroText.appendChild(orderNowButton);
 
-    const heroImage = document.createElement("img");
-    heroImage.classList.add("hero-img");
+    const heroImage = createElement("img", ["hero-img"]);
     heroImage.src = donutsImg;
     heroImage.alt = "Three donuts on light blue background";
     hero.appendChild(heroImage);
 }
 
 function menu() {
-    const menuContainer = document.createElement("div");
-    menuContainer.classList.add("menu-container");
+    const menuContainer = createElement("div", ["menu-container"]);
     content.appendChild(menuContainer);
 
     const donuts = createSection("Donuts", "donuts");
@@ -80,61 +73,51 @@ function menu() {
 }
 
 function about() {
-    const aboutContainer = document.createElement("div");
-    aboutContainer.classList.add("about-container");
+    const aboutContainer = createElement("div", ["about-container"]);
     content.appendChild(aboutContainer);
 
-    const donutDisplay = document.createElement("img");
-    donutDisplay.classList.add("donut-display-img");
+    const donutDisplay = createElement("img", ["donut-display-img"]);
     donutDisplay.src = donutDisplayImg;
     donutDisplay.alt = "Display with various donuts";
     aboutContainer.appendChild(donutDisplay);
 
-    const storeDetails = document.createElement("div");
-    storeDetails.classList.add("store-details");
+    const storeDetails = createElement("div", ["store-details"]);
     aboutContainer.appendChild(storeDetails);
 
     const history = createSection("History", "history");
     storeDetails.appendChild(history);
 
-    const historyContent = document.createElement("div");
-    historyContent.classList.add("history-content");
+    const historyContent = createElement("div", ["history-content"]);
     history.appendChild(historyContent);
 
-    const historyContentP1 = document.createElement("p");
-    historyContentP1.classList.add("history-content-p1");
+    const historyContentP1 = createElement("p", ["history-content-p1"]);
     historyContentP1.textContent = siteContent.historyP1;
     historyContent.appendChild(historyContentP1);
 
-    const historyContentP2 = document.createElement("p");
-    historyContentP2.classList.add("history-content-p2");
+    const historyContentP2 = createElement("p", ["history-content-p2"]);
     historyContentP2.textContent = siteContent.historyP2;
     historyContent.appendChild(historyContentP2);
 
     const storeHours = createSection("Store Hours", "store-hours");
     storeDetails.appendChild(storeHours);
 
-    const schedule = document.createElement("span");
-    schedule.classList.add("times");
+    const schedule = createElement("span", ["times"]);
     schedule.textContent = "Monday to Saturday: 9:00am - 6:00pm";
     storeHours.appendChild(schedule);
 
     const address = createSection("Address", "address");
     storeDetails.appendChild(address);
 
-    const addressContent = document.createElement("address");
-    addressContent.classList.add("address-content");
+    const addressContent = createElement("address", ["address-content"]);
     addressContent.textContent = "809 Doughridge Road, Crumbleton";
     address.appendChild(addressContent);
 }
 
 
 function createSection(titleText, className, headingLevel = "h2") {
-    const section = document.createElement("section");
-    section.classList.add(className);
+    const section = createElement("section", [className]);
 
-    const heading = document.createElement(headingLevel);
-    heading.classList.add(`${className}-title`);
+    const heading = createElement(headingLevel, [`${className}-title`]);
     heading.textContent = titleText;
     section.appendChild(heading);
 
@@ -153,6 +136,15 @@ function createMenuItem(label, price) {
     li.textContent = `${label} - ${price}`;
 
     return li;
+}
+
+function createElement(tag, classNames = []) {
+    const element = document.createElement(tag);
+    if (classNames.length > 0) {
+        element.classList.add(...classNames);
+    }
+
+    return element;
 }
 
 function clearContent() {
