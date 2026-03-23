@@ -59,7 +59,7 @@ body nav {
     margin-bottom: 2rem;
 }
 
-nav .btn {
+nav button {
     border-radius: 30px;
     font-size: 1rem;
     font-weight: 700;
@@ -69,7 +69,8 @@ nav .btn {
     font-family: 'Quicksand', Verdana, Geneva, Tahoma, sans-serif;
 }
 
-nav .btn:hover {
+nav button:hover,
+nav .active {
     text-decoration: underline;
     color: var(--nav-button-hover-color);
     cursor: pointer;

@@ -1,13 +1,13 @@
 import "./styles.css";
 import { home, menu, about, clearContent } from "./scripts.js";
 
-home();
-
 const routes = {
     home,
     menu,
     about
 }
+
+home();
 
 const navBar = document.querySelector("nav");
 navBar.addEventListener("click", (event) => {
@@ -18,4 +18,7 @@ navBar.addEventListener("click", (event) => {
 
     clearContent();
     routes[page]();
+
+    document.querySelectorAll("nav button").forEach(btn => btn.classList.remove("active"));
+    navButton.classList.add("active");
 });
