@@ -7,7 +7,7 @@ const siteContent = {
     homeDescription: ["Hand-crafted doughnuts made with obsession-level attention to detail",
         "From inventive glazes to bold, unexpected flavour combinations, every bite is designed to surprise, delight, and leave you craving the next one.",
         "Indulgence starts here."].join(" "),
-    historyP1: ["Founded in the bustling streets of Crumbleton, Glaze of Glory began as the one-person dream of a baker who believed life is simply bettor with doughnuts",
+    historyP1: ["Founded in the bustling streets of Crumbleton, Glaze of Glory began as the one-person dream of a baker who believed life is simply batter with doughnuts",
         "Armed with a rolling pin, a tiny storefront, and a knack for bold flavours, they quickly turned a small neighbourhood shop into the talk of the town."].join(" "),
     historyP2: ["Fast-forward to today and our dough has stretched far — with multiple locations across North America, more than 50 flavours, and new ideas always rising in the kitchen",
         "Whether you're into classics, wild creations, or something in between, we've got a treat that'll make your day a hole lot sweeter."].join(" "),
@@ -24,7 +24,7 @@ function home() {
     title.textContent = "Glaze of Glory";
     heroText.appendChild(title);
 
-    const description = createElement("p", "hero-description");
+    const description = createElement("p", ["hero-description"]);
     description.textContent = siteContent.homeDescription;
     heroText.appendChild(description);
 

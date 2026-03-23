@@ -1,24 +1,21 @@
 import "./styles.css";
-import { home, about, menu, clearContent } from "./scripts.js";
+import { home, menu, about, clearContent } from "./scripts.js";
 
 home();
+
+const routes = {
+    home,
+    menu,
+    about
+}
 
 const navBar = document.querySelector("nav");
 navBar.addEventListener("click", (event) => {
     const navButton = event.target.closest("button");
-
     if (!navButton) { return; }
 
-    const buttonClasses = navButton.classList;
+    const page = navButton.dataset.page;
 
     clearContent();
-    if (buttonClasses.contains("home")) {
-        home();
-    }
-    else if (buttonClasses.contains("menu")) {
-        menu();
-    }
-    else if (buttonClasses.contains("about")) {
-        about();
-    }
+    routes[page]();
 });
