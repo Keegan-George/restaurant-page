@@ -3,6 +3,16 @@ import donutDisplayImg from "./donut-display.jpg";
 
 const content = document.querySelector("#content");
 
+const siteContent = {
+    homeDescription: ["Hand-crafted doughnuts made with obsession-level attention to detail",
+        "From inventive glazes to bold, unexpected flavour combinations, every bite is designed to surprise, delight, and leave you craving the next one.",
+        "Indulgence starts here."].join(" "),
+    historyP1: ["Founded in the bustling streets of Crumbleton, Glaze of Glory began as the one-person dream of a baker who believed life is simply bettor with doughnuts",
+        "Armed with a rolling pin, a tiny storefront, and a knack for bold flavours, they quickly turned a small neighbourhood shop into the talk of the town."].join(" "),
+    historyP2: ["Fast-forward to today and our dough has stretched far — with multiple locations across North America, more than 50 flavours, and new ideas always rising in the kitchen",
+        "Whether you're into classics, wild creations, or something in between, we've got a treat that'll make your day a hole lot sweeter."].join(" "),
+}
+
 function home() {
     const hero = document.createElement("section");
     hero.classList.add("hero");
@@ -19,9 +29,7 @@ function home() {
 
     const description = document.createElement("p");
     description.classList.add("hero-description");
-    description.textContent = `Hand-crafted doughnuts made with obsession-level attention to detail. From inventive glazes to bold, 
-    unexpected flavour combinations, every bite is designed to surprise, delight, and leave you craving the next one. 
-    Indulgence starts here.`;
+    description.textContent = siteContent.homeDescription;
     heroText.appendChild(description);
 
     const orderNowButton = document.createElement("button");
@@ -155,16 +163,12 @@ function about() {
 
     const historyContentP1 = document.createElement("p");
     historyContentP1.classList.add("history-content-p1");
-    historyContentP1.textContent = `Founded in the bustling streets of Crumbleton, Glaze of Glory began as the one-person 
-    dream of a baker who believed life is simply bettor with doughnuts. Armed with a rolling pin, a tiny storefront, and a knack for 
-    bold flavours, they quickly turned a small neighbourhood shop into the talk of the town.`
+    historyContentP1.textContent = siteContent.historyP1;
     historyContent.appendChild(historyContentP1);
 
     const historyContentP2 = document.createElement("p");
     historyContentP2.classList.add("history-content-p2");
-    historyContentP2.textContent = `Fast-forward to today and our dough has traveled far — with multiple locations across North America, more than 50 flavours, and new 
-    ideas always rising in the kitchen. Whether you're into classics, wild creations, or something in between, we've got a treat that'll 
-    make your day a hole lot sweeter.`
+    historyContentP2.textContent = siteContent.historyP2;
     historyContent.appendChild(historyContentP2);
 
     const storeHours = document.createElement("section");
