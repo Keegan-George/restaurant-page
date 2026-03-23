@@ -12,7 +12,7 @@ This is part of [The Odin Project's Full Stack Javascript path](https://www.theo
 3. Open index.html in any modern browser
 
 ## Live Demo
-A live demo is available here: [Donut Restaurant](https://keegan-george.github.io/restaurant/)
+A live demo is available here: [Donut Restaurant](https://keegan-george.github.io/restaurant-page/)
 
 ## Features
 - Dynamic page rendering
@@ -23,7 +23,7 @@ A live demo is available here: [Donut Restaurant](https://keegan-george.github.i
 ## Technologies
 - HTML5
 - CSS (custom styling)
-- JavaScript (dom manipulation, module pattern, event delegation)
+- JavaScript (DOM manipulation, module pattern, event delegation)
 
 ## Fonts
 - [Open Sans](https://fonts.google.com/specimen/Open+Sans)
