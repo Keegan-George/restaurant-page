@@ -13,6 +13,10 @@ const siteContent = {
         "Whether you're into classics, wild creations, or something in between, we've got a treat that'll make your day a hole lot sweeter."].join(" "),
 }
 
+/**
+ * Renders the Home page, including hero text and hero image.
+ * Appends all generated elements into the main #content container.
+ */
 function home() {
     const hero = createElement("section", ["hero"]);;
     content.appendChild(hero);
@@ -38,6 +42,10 @@ function home() {
     hero.appendChild(heroImage);
 }
 
+/**
+ * Renders the Menu page, including sections for each product.
+ * Each section includes a title and a list of corresponding menu items.
+ */
 function menu() {
     const menuContainer = createElement("div", ["menu-container"]);
     content.appendChild(menuContainer);
@@ -72,6 +80,10 @@ function menu() {
     drinks.appendChild(drinksList);
 }
 
+/**
+ * Renders the About page, including history, store hours, and address.
+ * Also includes a donut showcase image.
+ */
 function about() {
     const aboutContainer = createElement("div", ["about-container"]);
     content.appendChild(aboutContainer);
@@ -113,7 +125,13 @@ function about() {
     address.appendChild(addressContent);
 }
 
-
+/**
+ * Creates a section element with a heading.
+ * @param {string} titleText - The text content for the section heading.
+ * @param {string} className - The class name applied to the section.
+ * @param {string} [headingLevel="h2"] - The heading tag to use (e.g., "h2", "h3").
+ * @returns {HTMLElement} The constructed section element.
+ */
 function createSection(titleText, className, headingLevel = "h2") {
     const section = createElement("section", [className]);
 
@@ -124,6 +142,11 @@ function createSection(titleText, className, headingLevel = "h2") {
     return section;
 }
 
+/**
+ * Creates a <ul> element for menu items.
+ * @param {string} className - The class name for the list.
+ * @returns {HTMLUListElement} The created unordered list.
+ */
 function createMenuList(className) {
     const list = document.createElement("ul");
     list.classList.add(`${className}-list`);
@@ -131,13 +154,25 @@ function createMenuList(className) {
     return list;
 }
 
+/**
+ * Creates a single menu item <li>.
+ * @param {string} label - The item label (e.g., "small", "6", "latte").
+ * @param {string} price - The price string (e.g., "$4.50").
+ * @returns {HTMLLIElement} The created list item.
+ */
 function createMenuItem(label, price) {
     const li = document.createElement("li");
     li.textContent = `${label} - ${price}`;
-
+    
     return li;
 }
 
+/**
+ * Creates an HTML element with optional class names.
+ * @param {string} tag - The HTML tag to create.
+ * @param {string[]} [classNames=[]] - Optional array of class names.
+ * @returns {HTMLElement} The created element.
+ */
 function createElement(tag, classNames = []) {
     const element = document.createElement(tag);
     if (classNames.length > 0) {
@@ -147,6 +182,9 @@ function createElement(tag, classNames = []) {
     return element;
 }
 
+/**
+ * Clears all child nodes from the main #content container.
+ */
 function clearContent() {
     content.replaceChildren();
 }
