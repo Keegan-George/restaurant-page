@@ -49,37 +49,34 @@ function menu() {
     menuContainer.classList.add("menu-container");
     content.appendChild(menuContainer);
 
-    const donuts = createMenuSection("Donuts", "donuts");
+    const donuts = createSection("Donuts", "donuts");
     menuContainer.appendChild(donuts);
 
     const donutList = createMenuList("donuts")
-    donuts.appendChild(donutList);
-
     donutList.appendChild(createMenuItem("1", "$4.50"));
     donutList.appendChild(createMenuItem("6", "$22.00"));
     donutList.appendChild(createMenuItem("12", "$43.00"));
+    donuts.appendChild(donutList);
 
-    const milkshakes = createMenuSection("Milkshakes", "milkshakes");
+    const milkshakes = createSection("Milkshakes", "milkshakes");
     menuContainer.appendChild(milkshakes);
 
     const milkshakeList = createMenuList("milkshake");
-    milkshakes.appendChild(milkshakeList);
-
     milkshakeList.appendChild(createMenuItem("small", "$3.35"));
     milkshakeList.appendChild(createMenuItem("medium", "$5.50"));
     milkshakeList.appendChild(createMenuItem("large", "$7.25"));
+    milkshakes.appendChild(milkshakeList);
 
-    const drinks = createMenuSection("Drinks", "drinks")
+    const drinks = createSection("Drinks", "drinks")
     menuContainer.appendChild(drinks);
 
     const drinksList = createMenuList("drinks");
-    drinks.appendChild(drinksList);
-
     drinksList.appendChild(createMenuItem("tea", "$1.65"));
     drinksList.appendChild(createMenuItem("coffee", "$2.25"));
     drinksList.appendChild(createMenuItem("juice", "$3.15"));
     drinksList.appendChild(createMenuItem("espresso", "$3.55"));
     drinksList.appendChild(createMenuItem("latte", "$4.25"));
+    drinks.appendChild(drinksList);
 }
 
 function about() {
@@ -97,14 +94,8 @@ function about() {
     storeDetails.classList.add("store-details");
     aboutContainer.appendChild(storeDetails);
 
-    const history = document.createElement("section");
-    history.classList.add("history");
+    const history = createSection("History", "history");
     storeDetails.appendChild(history);
-
-    const historyTitle = document.createElement("h2");
-    historyTitle.classList.add("history-title");
-    historyTitle.textContent = "History";
-    history.appendChild(historyTitle);
 
     const historyContent = document.createElement("div");
     historyContent.classList.add("history-content");
@@ -120,28 +111,16 @@ function about() {
     historyContentP2.textContent = siteContent.historyP2;
     historyContent.appendChild(historyContentP2);
 
-    const storeHours = document.createElement("section");
-    storeHours.classList.add("store-hours");
+    const storeHours = createSection("Store Hours", "store-hours");
     storeDetails.appendChild(storeHours);
-
-    const storeHoursTitle = document.createElement("h2");
-    storeHoursTitle.classList.add("store-hours-title");
-    storeHoursTitle.textContent = "Store Hours";
-    storeHours.appendChild(storeHoursTitle);
 
     const schedule = document.createElement("span");
     schedule.classList.add("times");
     schedule.textContent = "Monday to Saturday: 9:00am - 6:00pm";
     storeHours.appendChild(schedule);
 
-    const address = document.createElement("section");
-    address.classList.add("address");
+    const address = createSection("Address", "address");
     storeDetails.appendChild(address);
-
-    const addressTitle = document.createElement("h2");
-    addressTitle.classList.add("address-title");
-    addressTitle.textContent = "Address";
-    address.appendChild(addressTitle);
 
     const addressContent = document.createElement("address");
     addressContent.classList.add("address-content");
@@ -150,7 +129,7 @@ function about() {
 }
 
 
-function createMenuSection(titleText, className, headingLevel = "h2") {
+function createSection(titleText, className, headingLevel = "h2") {
     const section = document.createElement("section");
     section.classList.add(className);
 
