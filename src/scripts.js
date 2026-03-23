@@ -178,7 +178,7 @@ function about() {
 
     const schedule = document.createElement("span");
     schedule.classList.add("times")
-    schedule.textContent = "Tuesday to Saturday: 10:00am - 6:00pm";
+    schedule.textContent = "Monday to Saturday: 9:00am - 6:00pm";
     openingHours.appendChild(schedule);
 
     const address = document.createElement("section");
