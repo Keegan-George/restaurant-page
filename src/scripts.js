@@ -190,7 +190,7 @@ function about() {
     addressTitle.textContent = "Address";
     address.appendChild(addressTitle);
 
-    const addressContent = document.createElement("span");
+    const addressContent = document.createElement("address");
     addressContent.classList.add("address-content");
     addressContent.textContent = "809 Doughridge Road, Crumbleton";
     address.appendChild(addressContent);
