@@ -29,44 +29,69 @@
 }
 
 :root {
+    /* body */
     --background-color: #A7C1D9;
+    --text-color: #4B3F3A;
+    --font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 
+    /* spacing */
+    --space-xs: 0.5rem;
+    --space-s: 1rem;
+    --space-m: 2rem;
+    --space-m-l: 3rem;
+    --space-l: 4rem;
+    --space-xl: 6rem;
+
+    /* padding */
+    --padding-xs: 0.75rem;
+    --padding-s: 1rem;
+    --padding-m: 1.5rem;
+
+    /* navbar */
+    --nav-button-font-family: 'Quicksand', Verdana, Geneva, Tahoma, sans-serif;
     --nav-bar-color: #96B3D9;
     --nav-button-color: #3A2E2A;
     --nav-button-hover-color: #A6536A;
+    --nav-button-font-size: 1rem;
+    --nav-button-border-radius: 30px;
 
+    /* hero */
+    --hero-font-size: 8rem;
     --hero-title-color: #3A2E2A;
+    --hero-font-family: 'Orelega One', Georgia, 'Times New Roman', Times, serif;
 
+    /* order now button */
     --order-now-color: #C58A46;
     --order-now-text-color: #3A2E2A;
     --order-now-border-color: #3A2E2A;
 
+    /* menu */
     --menu-section-border-color: #C58A46;
 }
 
 body {
-    color: #4B3F3A;
+    color: var(--text-color);
     background-color: var(--background-color);
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-family: var(--font-family);
 }
 
 body nav {
     display: flex;
     justify-content: center;
-    padding: 1.5rem;
-    gap: 6rem;
+    padding: var(--padding-m);
+    gap: var(--space-xl);
     background-color: var(--nav-bar-color);
     margin-bottom: 2rem;
 }
 
 nav button {
-    border-radius: 30px;
-    font-size: 1rem;
+    border-radius: var(--nav-button-border-radius);
+    font-size: var(--nav-button-font-size);
     font-weight: 700;
     border: none;
     color: var(--nav-button-color);
     background-color: var(--nav-bar-color);
-    font-family: 'Quicksand', Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--nav-button-font-family);
 }
 
 nav button:hover,
@@ -81,7 +106,7 @@ nav .active {
     justify-content: center;
     align-items: center;
     margin: 0rem 5rem;
-    gap: 2rem;
+    gap: var(--space-m);
 }
 
 .hero .hero-text {
@@ -91,8 +116,8 @@ nav .active {
 }
 
 .hero-text .hero-title {
-    font-family: 'Orelega One', Georgia, 'Times New Roman', Times, serif;
-    font-size: 8em;
+    font-family: var(--hero-font-family);
+    font-size: var(--hero-font-size);
     color: var(--hero-title-color);
 }
 
@@ -102,7 +127,7 @@ nav .active {
 
 .hero-text .order-now {
     font-weight: 700;
-    padding: 0.75rem;
+    padding: var(--padding-xs);
     width: 10rem;
     border-radius: 20px;
     margin-top: 2rem;
@@ -127,7 +152,7 @@ nav .active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: var(--space-m-l);
 }
 
 .menu-container section,
@@ -136,13 +161,13 @@ nav .active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.5em;
+    gap: var(--space-xs);
 }
 
 .menu-container section {
     border: 3px dotted var(--menu-section-border-color);
-    padding: 1rem 1.5rem;
-    gap: 0.5em;
+    padding: var(--padding-s) var(--padding-m);
+    gap: var(--space-xs);
     width: 35%;
 }
 
@@ -157,7 +182,7 @@ nav .active {
 #content .about-container {
     display: flex;
     justify-content: center;
-    gap: 4rem;
+    gap: var(--space-l);
 }
 
 .about-container .donut-display-img {
@@ -167,7 +192,7 @@ nav .active {
 .history .history-content {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--space-s);
 }
 
 .history-content p {
@@ -181,6 +206,6 @@ nav .active {
 }
 
 .store-details h2 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     text-decoration: underline;
 }
