@@ -7,7 +7,7 @@ const routes = {
     about
 }
 
-home();
+loadPage("home");
 
 const navBar = document.querySelector("nav");
 navBar.addEventListener("click", (event) => {
@@ -16,9 +16,13 @@ navBar.addEventListener("click", (event) => {
 
     const page = navButton.dataset.page;
 
+    loadPage(page);
+});
+
+function loadPage(page) {
     clearContent();
     routes[page]();
-
     document.querySelectorAll("nav button").forEach(btn => btn.classList.remove("active"));
-    navButton.classList.add("active");
-});
+    document.querySelector(`[data-page="${page}"]`).classList.add("active");
+}
+
