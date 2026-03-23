@@ -11,6 +11,9 @@ This is part of [The Odin Project's Full Stack Javascript path](https://www.theo
 2. Navigate to the project folder: ```cd restaurant```
 3. Open index.html in any modern browser
 
+## Live Demo
+A live demo is available here: [Donut Restaurant](https://keegan-george.github.io/restaurant/)
+
 ## Features
 - Dynamic page rendering
 - Modular JavaScript structure
