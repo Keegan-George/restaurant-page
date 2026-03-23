@@ -30,7 +30,7 @@ function home() {
     heroText.appendChild(orderNowButton);
 
     const heroImage = document.createElement("img");
-    heroImage.classList.add("hero-img")
+    heroImage.classList.add("hero-img");
     heroImage.src = donutsImg;
     heroImage.alt = "Three donuts on light blue background";
     hero.appendChild(heroImage);
@@ -167,19 +167,19 @@ function about() {
     make your day a hole lot sweeter.`
     historyContent.appendChild(historyContentP2);
 
-    const openingHours = document.createElement("section");
-    openingHours.classList.add("store-hours");
-    storeDetails.appendChild(openingHours);
+    const storeHours = document.createElement("section");
+    storeHours.classList.add("store-hours");
+    storeDetails.appendChild(storeHours);
 
-    const openingHoursTitle = document.createElement("h2");
-    openingHoursTitle.classList.add("opening-hours-title");
-    openingHoursTitle.textContent = "Opening Hours";
-    openingHours.appendChild(openingHoursTitle);
+    const storeHoursTitle = document.createElement("h2");
+    storeHoursTitle.classList.add("store-hours-title");
+    storeHoursTitle.textContent = "Store Hours";
+    storeHours.appendChild(storeHoursTitle);
 
     const schedule = document.createElement("span");
-    schedule.classList.add("times")
+    schedule.classList.add("times");
     schedule.textContent = "Monday to Saturday: 9:00am - 6:00pm";
-    openingHours.appendChild(schedule);
+    storeHours.appendChild(schedule);
 
     const address = document.createElement("section");
     address.classList.add("address");
