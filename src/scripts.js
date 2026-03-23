@@ -148,7 +148,7 @@ function createElement(tag, classNames = []) {
 }
 
 function clearContent() {
-    content.textContent = "";
+    content.replaceChildren();
 }
 
 export { home, menu, about, clearContent };
