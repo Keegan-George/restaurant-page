@@ -49,51 +49,30 @@ function menu() {
     menuContainer.classList.add("menu-container");
     content.appendChild(menuContainer);
 
-    const donuts = document.createElement("section");
-    donuts.classList.add("donuts");
+    const donuts = createMenuSection("Donuts", "donuts");
     menuContainer.appendChild(donuts);
 
-    const donutTitle = document.createElement("h2");
-    donutTitle.classList.add("donut-title");
-    donutTitle.textContent = "Donuts";
-    donuts.appendChild(donutTitle);
-
-    const donutList = document.createElement("ul");
-    donutList.classList.add("donut-list");
+    const donutList = createMenuList("donuts")
     donuts.appendChild(donutList);
 
     donutList.appendChild(createMenuItem("1", "$4.50"));
     donutList.appendChild(createMenuItem("6", "$22.00"));
     donutList.appendChild(createMenuItem("12", "$43.00"));
 
-    const milkshakes = document.createElement("section");
-    milkshakes.classList.add("milkshakes");
+    const milkshakes = createMenuSection("Milkshakes", "milkshakes");
     menuContainer.appendChild(milkshakes);
 
-    const milkshakeTitle = document.createElement("h2");
-    milkshakeTitle.classList.add("milkshake-title");
-    milkshakeTitle.textContent = "Milkshakes";
-    milkshakes.appendChild(milkshakeTitle);
-
-    const milkshakeList = document.createElement("ul");
-    milkshakeList.classList.add("milkshake-list");
+    const milkshakeList = createMenuList("milkshake");
     milkshakes.appendChild(milkshakeList);
 
     milkshakeList.appendChild(createMenuItem("small", "$3.35"));
     milkshakeList.appendChild(createMenuItem("medium", "$5.50"));
     milkshakeList.appendChild(createMenuItem("large", "$7.25"));
 
-    const drinks = document.createElement("section");
-    drinks.classList.add("drinks");
+    const drinks = createMenuSection("Drinks", "drinks")
     menuContainer.appendChild(drinks);
 
-    const drinksTitle = document.createElement("h2");
-    drinksTitle.classList.add("drinks-title");
-    drinksTitle.textContent = "Drinks";
-    drinks.appendChild(drinksTitle);
-
-    const drinksList = document.createElement("ul");
-    drinksList.classList.add("drinks-list");
+    const drinksList = createMenuList("drinks");
     drinks.appendChild(drinksList);
 
     drinksList.appendChild(createMenuItem("tea", "$1.65"));
@@ -170,9 +149,30 @@ function about() {
     address.appendChild(addressContent);
 }
 
+
+function createMenuSection(titleText, className, headingLevel = "h2") {
+    const section = document.createElement("section");
+    section.classList.add(className);
+
+    const heading = document.createElement(headingLevel);
+    heading.classList.add(`${className}-title`);
+    heading.textContent = titleText;
+    section.appendChild(heading);
+
+    return section;
+}
+
+function createMenuList(className) {
+    const list = document.createElement("ul");
+    list.classList.add(`${className}-list`);
+
+    return list;
+}
+
 function createMenuItem(label, price) {
     const li = document.createElement("li");
     li.textContent = `${label} - ${price}`;
+
     return li;
 }
 
