@@ -50,20 +50,21 @@ function menu() {
     donutTitle.textContent = "Donuts";
     donuts.appendChild(donutTitle);
 
-    const single = document.createElement("span");
-    single.classList.add("single");
+    const donutList = document.createElement("ul");
+    donutList.classList.add("donut-list");
+    donuts.appendChild(donutList);
+
+    const single = document.createElement("li");
     single.textContent = "1 - $4.50";
-    donuts.appendChild(single);
+    donutList.appendChild(single);
 
-    const halfDozen = document.createElement("span");
-    halfDozen.classList.add("half-dozen");
+    const halfDozen = document.createElement("li");
     halfDozen.textContent = "6 - $22.00";
-    donuts.appendChild(halfDozen);
+    donutList.appendChild(halfDozen);
 
-    const dozen = document.createElement("span");
-    dozen.classList.add("dozen");
+    const dozen = document.createElement("li");
     dozen.textContent = "12 - $43.00";
-    donuts.appendChild(dozen);
+    donutList.appendChild(dozen);
 
     const milkshakes = document.createElement("section");
     milkshakes.classList.add("milkshakes");
@@ -74,20 +75,21 @@ function menu() {
     milkshakeTitle.textContent = "Milkshakes";
     milkshakes.appendChild(milkshakeTitle);
 
-    const smallMilkshake = document.createElement("span");
-    smallMilkshake.classList.add("small-milkshake");
+    const milkshakeList = document.createElement("ul");
+    milkshakeList.classList.add("milkshake-list");
+    milkshakes.appendChild(milkshakeList);
+
+    const smallMilkshake = document.createElement("li");
     smallMilkshake.textContent = "small - $3.45";
-    milkshakes.appendChild(smallMilkshake);
+    milkshakeList.appendChild(smallMilkshake);
 
-    const mediumMilkshake = document.createElement("span");
-    mediumMilkshake.classList.add("medium-milkshake");
+    const mediumMilkshake = document.createElement("li");
     mediumMilkshake.textContent = "medium - $5.50";
-    milkshakes.appendChild(mediumMilkshake);
+    milkshakeList.appendChild(mediumMilkshake);
 
-    const largeMilkshake = document.createElement("span");
-    largeMilkshake.classList.add("large-milkshake");
+    const largeMilkshake = document.createElement("li");
     largeMilkshake.textContent = "large - $7.25";
-    milkshakes.appendChild(largeMilkshake);
+    milkshakeList.appendChild(largeMilkshake);
 
     const drinks = document.createElement("section");
     drinks.classList.add("drinks");
@@ -98,30 +100,29 @@ function menu() {
     drinksTitle.textContent = "Drinks";
     drinks.appendChild(drinksTitle);
 
-    const tea = document.createElement("span");
-    tea.classList.add("tea");
+    const drinksList = document.createElement("ul");
+    drinksList.classList.add("drinks-list");
+    drinks.appendChild(drinksList);
+
+    const tea = document.createElement("li");
     tea.textContent = "tea - $1.45";
-    drinks.appendChild(tea);
+    drinksList.appendChild(tea);
 
-    const coffee = document.createElement("span");
-    coffee.classList.add("coffee");
+    const coffee = document.createElement("li");
     coffee.textContent = "coffee - $2.25";
-    drinks.appendChild(coffee);
+    drinksList.appendChild(coffee);
 
-    const juice = document.createElement("span");
-    juice.classList.add("juice");
+    const juice = document.createElement("li");
     juice.textContent = "juice - $3.00";
-    drinks.appendChild(juice);
+    drinksList.appendChild(juice);
 
-    const espresso = document.createElement("span");
-    espresso.classList.add("espresso");
+    const espresso = document.createElement("li");
     espresso.textContent = "espresso - $3.45";
-    drinks.appendChild(espresso);
+    drinksList.appendChild(espresso);
 
-    const latte = document.createElement("span");
-    latte.classList.add("latte");
+    const latte = document.createElement("li");
     latte.textContent = "latte - $4.25";
-    drinks.appendChild(latte);
+    drinksList.appendChild(latte);
 }
 
 function about() {
