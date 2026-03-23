@@ -1,9 +1,15 @@
 # Restaurant Page
 
-## Fonts and Images
+
+## Fonts
+- [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- [Orelega One](https://fonts.google.com/specimen/Orelega+One)
+- [Quicksand](https://fonts.google.com/specimen/Quicksand)
+
+## Images
 - Donut hero: Nerfee Mirandilla on Unplash
 - Donut display: Andrew Solok 🇺🇦 on Unsplash
-      
+
 
 Donut image:
 https://unsplash.com/photos/chocolate-donuts-hzqE4zC6j-E

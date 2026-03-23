@@ -1,4 +1,5 @@
 import donutsImg from "./donuts-hero.jpg";
+import donutDisplayImg from "./donut-display.jpg";
 
 const content = document.querySelector("#content");
 
@@ -27,7 +28,6 @@ function home() {
     orderNowButton.classList.add("btn", "order-now");
     orderNowButton.textContent = "Order Now";
     heroText.appendChild(orderNowButton);
-
 
     const heroImage = document.createElement("img");
     heroImage.classList.add("hero-img")
@@ -89,11 +89,6 @@ function menu() {
     largeMilkshake.textContent = "large - $7.25";
     milkshakes.appendChild(largeMilkshake);
 
-    const milkshakeFlavours = document.createElement("span");
-    milkshakeFlavours.classList.add("milk-shake-flavours");
-    milkshakeFlavours.textContent = "Vanilla, Strawberry, Chocolate, Banana, Oreo, Kit-Kat, Smarties, Biscoff, Pistachio, Cosmic Brownie."
-    milkshakes.appendChild(milkshakeFlavours);
-
     const drinks = document.createElement("section");
     drinks.classList.add("drinks");
     menuContainer.appendChild(drinks);
@@ -134,9 +129,18 @@ function about() {
     aboutContainer.classList.add("about-container");
     content.appendChild(aboutContainer);
 
+    const donutDisplay = document.createElement("img");
+    donutDisplay.classList.add("donut-display-img");
+    donutDisplay.src = donutDisplayImg;
+    aboutContainer.appendChild(donutDisplay);
+
+    const storeDetails = document.createElement("div");
+    storeDetails.classList.add("store-details");
+    aboutContainer.appendChild(storeDetails);
+
     const history = document.createElement("section");
     history.classList.add("history");
-    aboutContainer.appendChild(history);
+    storeDetails.appendChild(history);
 
     const historyTitle = document.createElement("h2");
     historyTitle.classList.add("history-title");
@@ -163,7 +167,7 @@ function about() {
 
     const openingHours = document.createElement("section");
     openingHours.classList.add("store-hours");
-    aboutContainer.appendChild(openingHours);
+    storeDetails.appendChild(openingHours);
 
     const openingHoursTitle = document.createElement("h2");
     openingHoursTitle.classList.add("opening-hours-title");
@@ -177,7 +181,7 @@ function about() {
 
     const address = document.createElement("section");
     address.classList.add("address");
-    aboutContainer.appendChild(address);
+    storeDetails.appendChild(address);
 
     const addressTitle = document.createElement("h2");
     addressTitle.classList.add("address-title");
