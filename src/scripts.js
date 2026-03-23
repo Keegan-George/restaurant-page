@@ -133,6 +133,7 @@ function about() {
     const donutDisplay = document.createElement("img");
     donutDisplay.classList.add("donut-display-img");
     donutDisplay.src = donutDisplayImg;
+    donutDisplay.alt = "Display with various donuts";
     aboutContainer.appendChild(donutDisplay);
 
     const storeDetails = document.createElement("div");
