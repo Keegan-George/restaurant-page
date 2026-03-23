@@ -62,17 +62,9 @@ function menu() {
     donutList.classList.add("donut-list");
     donuts.appendChild(donutList);
 
-    const single = document.createElement("li");
-    single.textContent = "1 - $4.50";
-    donutList.appendChild(single);
-
-    const halfDozen = document.createElement("li");
-    halfDozen.textContent = "6 - $22.00";
-    donutList.appendChild(halfDozen);
-
-    const dozen = document.createElement("li");
-    dozen.textContent = "12 - $43.00";
-    donutList.appendChild(dozen);
+    donutList.appendChild(createMenuItem("1", "$4.50"));
+    donutList.appendChild(createMenuItem("6", "$22.00"));
+    donutList.appendChild(createMenuItem("12", "$43.00"));
 
     const milkshakes = document.createElement("section");
     milkshakes.classList.add("milkshakes");
@@ -87,17 +79,9 @@ function menu() {
     milkshakeList.classList.add("milkshake-list");
     milkshakes.appendChild(milkshakeList);
 
-    const smallMilkshake = document.createElement("li");
-    smallMilkshake.textContent = "small - $3.45";
-    milkshakeList.appendChild(smallMilkshake);
-
-    const mediumMilkshake = document.createElement("li");
-    mediumMilkshake.textContent = "medium - $5.50";
-    milkshakeList.appendChild(mediumMilkshake);
-
-    const largeMilkshake = document.createElement("li");
-    largeMilkshake.textContent = "large - $7.25";
-    milkshakeList.appendChild(largeMilkshake);
+    milkshakeList.appendChild(createMenuItem("small", "$3.35"));
+    milkshakeList.appendChild(createMenuItem("medium", "$5.50"));
+    milkshakeList.appendChild(createMenuItem("large", "$7.25"));
 
     const drinks = document.createElement("section");
     drinks.classList.add("drinks");
@@ -112,25 +96,11 @@ function menu() {
     drinksList.classList.add("drinks-list");
     drinks.appendChild(drinksList);
 
-    const tea = document.createElement("li");
-    tea.textContent = "tea - $1.45";
-    drinksList.appendChild(tea);
-
-    const coffee = document.createElement("li");
-    coffee.textContent = "coffee - $2.25";
-    drinksList.appendChild(coffee);
-
-    const juice = document.createElement("li");
-    juice.textContent = "juice - $3.00";
-    drinksList.appendChild(juice);
-
-    const espresso = document.createElement("li");
-    espresso.textContent = "espresso - $3.45";
-    drinksList.appendChild(espresso);
-
-    const latte = document.createElement("li");
-    latte.textContent = "latte - $4.25";
-    drinksList.appendChild(latte);
+    drinksList.appendChild(createMenuItem("tea", "$1.65"));
+    drinksList.appendChild(createMenuItem("coffee", "$2.25"));
+    drinksList.appendChild(createMenuItem("juice", "$3.15"));
+    drinksList.appendChild(createMenuItem("espresso", "$3.55"));
+    drinksList.appendChild(createMenuItem("latte", "$4.25"));
 }
 
 function about() {
@@ -198,6 +168,12 @@ function about() {
     addressContent.classList.add("address-content");
     addressContent.textContent = "809 Doughridge Road, Crumbleton";
     address.appendChild(addressContent);
+}
+
+function createMenuItem(label, price) {
+    const li = document.createElement("li");
+    li.textContent = `${label} - ${price}`;
+    return li;
 }
 
 function clearContent() {
